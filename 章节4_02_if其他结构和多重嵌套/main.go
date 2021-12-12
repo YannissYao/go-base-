@@ -1,0 +1,38 @@
+package main
+
+import "fmt"
+
+func main() {
+	score :=73
+	//冲重嵌套
+	//if score >=60{
+	//	if score >=90{
+	//		fmt.Println("优秀")
+	//	}
+	//	if score >=80 && score <90{
+	//		fmt.Println("良好")
+	//	}
+	//	if score >=70 && score <80{
+	//		fmt.Println("中等")
+	//	}
+	//	if score >=60 && score <70{
+	//		fmt.Println("及格")
+	//	}
+	//}else{
+	//	fmt.Println("不及格")
+	//}
+
+
+	if score >=90 {
+		fmt.Println("优秀")
+	}else if score >=80 {
+		fmt.Println("良好")
+	}else if score >=70 {
+		fmt.Println("中等")
+	}else if score >=60{
+		fmt.Println("及格")
+	}else {
+		fmt.Println("不及格")
+	}
+
+}

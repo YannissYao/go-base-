@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<peoples version="0.9">
+    <people id="888">
+        <name>smallming</name>
+        <address>北京海淀</address>
+    </people>
+    <people id="998">
+        <name>佳明哥</name>
+        <address>北京朝阳</address>
+    </people>
+</peoples>
