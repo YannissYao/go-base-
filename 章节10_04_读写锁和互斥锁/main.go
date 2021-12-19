@@ -1,19 +1,21 @@
 package main
 
 import (
-	"sync"
 	"fmt"
+	"strconv"
+	"sync"
 )
 
 //var (
 //	num = 100
-//	wg sync.WaitGroup
-//	m sync.Mutex
+//	wg  sync.WaitGroup
+//	m   sync.Mutex
 //)
-//func demo(){
+//
+//func demo() {
 //	m.Lock()
-//	for i:=0;i<10;i++{
-//		num = num -1
+//	for i := 0; i < 10; i++ {
+//		num = num - 1
 //	}
 //	m.Unlock()
 //	wg.Done()
@@ -21,7 +23,7 @@ import (
 //
 //func main() {
 //	wg.Add(10)
-//	for i :=0;i<10;i++{
+//	for i := 0; i < 10; i++ {
 //		go demo()
 //	}
 //	wg.Wait()
@@ -31,16 +33,16 @@ import (
 
 /*
 测试读写锁
- */
+*/
 func main() {
 	var rwm sync.RWMutex
 	var wg sync.WaitGroup
 	wg.Add(10)
-	m := make(map[int]int)
+	m := make(map[string]string)
 	for i := 0; i < 10; i++ {
 		go func(j int) {
 			rwm.Lock()
-			m[j] = j
+			m[strconv.FormatInt(int64(j), 10)] = strconv.FormatInt(int64(j), 10)
 			fmt.Println(m)
 			rwm.Unlock()
 			wg.Done()

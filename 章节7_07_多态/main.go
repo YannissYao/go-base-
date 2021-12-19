@@ -24,23 +24,27 @@ import "fmt"
 //}
 
 type Live interface {
-	run()
+	run() (int, error)
 }
-type People struct {}
-type Animate struct {}
+type People struct{}
+type Animate struct{}
 
-func (p *People) run(){
+func (p *People) run() (int, error) {
 	fmt.Println("人在跑步")
+	return 1, nil
 }
-func (a *Animate) run(){
+func (a *Animate) run() (int, error) {
 	fmt.Println("动物在奔跑")
+	return 1, nil
 }
 
-func allrun(live Live){
+func allrun(live Live) {
 	live.run()
+
 }
 
 func main() {
-	peo:=&Animate{}
+
+	peo := &Animate{}
 	allrun(peo)
 }

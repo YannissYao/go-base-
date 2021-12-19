@@ -7,7 +7,7 @@ import (
 /*
 同步
 主协程和子协程之间的通信
- */
+*/
 //func main() {
 //	ch := make(chan int)
 //
@@ -23,7 +23,7 @@ import (
 
 /*
 两个子协程的通信
- */
+*/
 
 //func main() {
 //	ch1 := make(chan string)
@@ -47,7 +47,7 @@ import (
 
 /*
 使用for range取出channel中数据
- */
+*/
 
 func main() {
 	ch1 := make(chan string)
@@ -55,7 +55,7 @@ func main() {
 
 	go func() {
 		for i := 97; i <= 97+26; i++ {
-			ch1 <- fmt.Sprintf("%c", i)
+			ch1 <- fmt.Sprintf("%d", i)
 		}
 		ch2 <- 1
 	}()
@@ -64,8 +64,7 @@ func main() {
 		for n := range ch1 {
 			fmt.Println(n)
 		}
-		ch2<-2
+		ch2 <- 1
 	}()
-
 	<-ch2
 }

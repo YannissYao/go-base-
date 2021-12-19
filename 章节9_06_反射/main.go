@@ -1,8 +1,8 @@
 package main
 
 import (
-	"reflect"
 	"fmt"
+	"reflect"
 )
 
 type People struct {
@@ -11,13 +11,13 @@ type People struct {
 }
 
 func main() {
-	//a:=1.5
-	//fmt.Println(reflect.TypeOf(a))
-	//fmt.Println(reflect.ValueOf(a))
+	a := 1.5
+	fmt.Println(reflect.TypeOf(a))
+	fmt.Println(reflect.ValueOf(a))
 
 	/*
-	获取结构体属性的值
-	 */
+		获取结构体属性的值
+	*/
 	//peo:=People{"smallming","北京海淀"}
 	//
 	//v:=reflect.ValueOf(peo)
@@ -29,8 +29,8 @@ func main() {
 	//fmt.Println(v.FieldByName(content))
 
 	/*
-	设置属性的值
-	 */
+		设置属性的值
+	*/
 	//content := "Name"
 	//peo := new(People)
 	//v := reflect.ValueOf(peo).Elem()
@@ -41,8 +41,8 @@ func main() {
 	//fmt.Println(peo)
 
 	/*
-	获取标记
-	 */
+		获取标记
+	*/
 	t := reflect.TypeOf(People{})
 	fmt.Println(t.FieldByName("Name"))
 	name, _ := t.FieldByName("Name")

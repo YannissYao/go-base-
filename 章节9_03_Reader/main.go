@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 	//fmt.Println("读取数据长度为",n)
 	//fmt.Println("数据内容为:",string(b))
 
-	f, _ := os.Open("D:/go.txt")
+	f, _ := os.Open("/Users/Joeysin/Desktop/032.txt")
 	fileInfo, _ := f.Stat()
 
 	b := make([]byte, fileInfo.Size())

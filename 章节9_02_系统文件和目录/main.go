@@ -1,18 +1,17 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
 func main() {
-	//err := os.Mkdir("D:/godir/a/b", os.ModeDir)
+	//err := os.Mkdir("/Users/Joeysin/Desktop/aa", os.ModeDir)
 	//if err != nil {
 	//	fmt.Println("文件夹创建失败,", err)
 	//	return
 	//}
 	//fmt.Println("文件夹创建成功")
-
 
 	//err := os.MkdirAll("D:/godir/a/b", os.ModeDir)
 	//if err != nil {
@@ -42,15 +41,14 @@ func main() {
 	//}
 	//fmt.Println("重命名成功")
 
-
-	//f,err:=os.Open("D:/godir1/test1.txt")
-	//if err!=nil{
-	//	fmt.Println("文件获取失败",err)
+	//f, err := os.Open("/Users/Joeysin/Desktop/032.txt")
+	//if err != nil {
+	//	fmt.Println("文件获取失败", err)
 	//	return
 	//}
-	//fileInfo,err:=f.Stat()
-	//if err!=nil{
-	//	fmt.Println("文件信息获取失败",err)
+	//fileInfo, err := f.Stat()
+	//if err != nil {
+	//	fmt.Println("文件信息获取失败", err)
 	//	return
 	//}
 	//fmt.Println(fileInfo.Size())
@@ -59,10 +57,9 @@ func main() {
 	//fmt.Println(fileInfo.IsDir())
 	//fmt.Println(fileInfo.Name())
 
-
-	err:=os.RemoveAll("D:/godir1")
-	if err!=nil{
-		fmt.Println("删除失败,",err)
+	err := os.RemoveAll("/Users/Joeysin/Desktop/aa")
+	if err != nil {
+		fmt.Println("删除失败,", err)
 		return
 	}
 	fmt.Println("删除成功")
